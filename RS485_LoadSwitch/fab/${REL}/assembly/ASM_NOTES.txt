@@ -1,0 +1,14 @@
+Assembly Class: IPC-A-610 Class 2, lead-free reflow
+Stencil: 0.12–0.15 mm laser-cut, ENIG boards; windowpane big pads (LM2596 tab ~50% coverage)
+Fiducials: Use 3 global top fiducials; local fiducials near STM32 and TC4468
+Reflow: Pb-free profile; peak 245 °C max, per paste spec
+Polarity:
+- Diodes: Notch/band matches silkscreen bar; STPS3L60 band to +12V
+- TVS: Cathode mark to +12V (outputs), SM712 ref to silk dot
+- ICs: Pin-1 triangle on silk + dot on package
+Hand-inserted THT:
+- TO-220 (IRLZ44N, IRF4905), terminal blocks, large electrolytics
+- Recommend wave or selective; clip heatsinks if used
+Torque (terminal blocks): 0.22–0.25 N·m typical (per vendor datasheet)
+Cleaning: No-clean flux acceptable; clean if residue causes leakage in high-impedance areas
+De-populate (DNF) by default: Polyfuse, RC snubbers, CMC on RS-485 (unless specified)
