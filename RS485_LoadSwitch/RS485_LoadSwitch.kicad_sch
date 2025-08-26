@@ -8,11 +8,11 @@
     (comment 3 "TVS: SMBJ24A (input), SM712 (RS-485), SMBJ33A (outputs)")
   )
 
-  (global_label (shape input) (at 30 20) (text "+12V_IN"))
-  (global_label (shape input) (at 30 25) (text "+12V_RAIL"))
-  (global_label (shape input) (at 30 30) (text "+5V"))
-  (global_label (shape input) (at 30 35) (text "+3V3"))
-  (global_label (shape input) (at 30 40) (text "GND"))
+  (global_label "+12V_IN"   (at 30 20 0) (shape input))
+  (global_label "+12V_RAIL" (at 30 25 0) (shape input))
+  (global_label "+5V"       (at 30 30 0) (shape input))
+  (global_label "+3V3"      (at 30 35 0) (shape input))
+  (global_label "GND"       (at 30 40 0) (shape input))
 
   (sheet (at 30 60) (size 140 80)
     (property "Sheet name" "Power")
@@ -109,6 +109,4 @@
     (pin (uuid 93) (at 360 320) (name "OUT4") (shape output))
     (pin (uuid 94) (at 360 325) (name "ADC_SNS4") (shape output))
   )
-
-  (text "Tie nets via global labels. No explicit wires needed at top level.")
 )

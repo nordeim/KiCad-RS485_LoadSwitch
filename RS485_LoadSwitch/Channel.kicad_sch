@@ -2,9 +2,9 @@
   (paper "A4")
   (title_block (title "Load Channel: IRLZ44N + Flyback + TVS + INA180"))
 
-  (global_label (at 30 30) (text "+12V_RAIL"))
-  (global_label (at 30 35) (text "GND"))
-  (global_label (at 30 40) (text "CTRL_5V"))
+  (global_label "+12V_RAIL" (at 30 30 0))
+  (global_label "GND"       (at 30 35 0))
+  (global_label "CTRL_5V"   (at 30 40 0))
 
   (symbol (lib_id "Device:Q_NMOS_GDS") (at 90 50)
     (property "Reference" "Qx")(property "Value" "IRLZ44N")
@@ -30,6 +30,6 @@
   (symbol (lib_id "Device:LED") (at 125 35) (property "Reference" "LEDx")(property "Value" "GREEN"))
   (symbol (lib_id "Device:R") (at 120 35) (property "Reference" "R_LED")(property "Value" "2.2k"))
 
-  (global_label (at 150 50) (text "OUT#"))
-  (global_label (at 150 70) (text "ADC_SNS#"))
+  (global_label "OUT#"      (at 150 50 0))
+  (global_label "ADC_SNS#"  (at 150 70 0))
 )
