@@ -7,7 +7,7 @@
   },
   "project": {
     "files": {
-      "schematic": "RS485_LoadSwitch_Main.kicad_sch",
+      "schematic": "RS485_LoadSwitch.kicad_sch",
       "board": "RS485_LoadSwitch.kicad_pcb"
     },
     "library_references": {
