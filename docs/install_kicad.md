@@ -33,8 +33,8 @@
      ```
 
 ---
-https://www.kicad.org/download/linux/
+https://www.kicad.org/download/linux/  
 
-sudo add-apt-repository ppa:kicad/kicad-9.0-releases
-sudo apt update
-sudo apt install kicad
+sudo add-apt-repository ppa:kicad/kicad-9.0-releases  
+sudo apt update  
+sudo apt install kicad  
