@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "meta": {
+    "filename": "RS485_LoadSwitch.kicad_pro",
+    "version": "7.0",
+    "generator": "OpenAI-EE"
+  },
+  "project": {
+    "files": {
+      "schematic": "RS485_LoadSwitch_Main.kicad_sch",
+      "board": "RS485_LoadSwitch.kicad_pcb"
+    },
+    "library_references": {
+      "symbols": [],
+      "footprints": []
+    },
+    "page_layout_descr_file": ""
+  },
+  "boards": {
+    "board": {
+      "design_settings": {
+        "track_widths": [0.25, 0.4, 1.0, 2.5, 3.0],
+        "via_sizes": [0.6, 0.8, 1.2],
+        "via_drills": [0.3, 0.4, 0.6]
+      }
+    }
+  },
+  "schematic": {
+    "page_settings": {
+      "paper": "A4"
+    }
+  }
+}
