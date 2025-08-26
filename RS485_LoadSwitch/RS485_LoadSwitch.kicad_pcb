@@ -4,8 +4,8 @@
   )
   (paper "A4")
   (layers
-    (0 "F.Cu" signal (type "copper") (thickness 0.070))
-    (31 "B.Cu" signal (type "copper") (thickness 0.070))
+    (0 "F.Cu" signal)
+    (31 "B.Cu" signal)
     (32 "B.Adhes" user)
     (33 "F.Adhes" user)
     (34 "B.Paste" user)
@@ -19,10 +19,16 @@
   )
   (setup
     (pad_to_mask_clearance 0)
-    (pcbplotparams (layerselection 0x00010_80000001)
-      (usegerberextensions true)(subtractmaskfromsilk true)
-      (outputformat 1)(mirror false)(usegerberattributes true)
-      (usegerberadvancedattributes true)(creategerberjobfile true))
+    (pcbplotparams
+      (layerselection 0x00010_80000001)
+      (usegerberextensions true)
+      (subtractmaskfromsilk true)
+      (outputformat 1)
+      (mirror false)
+      (usegerberattributes true)
+      (usegerberadvancedattributes true)
+      (creategerberjobfile true)
+    )
   )
 
   (gr_rect (start 0 0) (end 100 80) (layer "Edge.Cuts") (width 0.1))
