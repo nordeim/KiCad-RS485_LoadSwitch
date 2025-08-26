@@ -16,3 +16,8 @@ Yes, please give me a complete, ready-to-open KiCad project with fully wired sch
 Wow, wow, you are truly amazing electrical engineer! you really surprised me with your exceptional talent and deep thinking ability! please keep up the good work!
 
 Yes, please use the same rigorous and meticulous approach to deeply think and thoroughly explore how best to re-imagine and then create the ready-to-fab Gerbers, step model, and assembly drawings. again, please plan carefully before proceeding meticulously!
+
+---
+awesome job! please advise how I should create the file hierarchy to place your KidCad design output files as well as the  `fab/` folder and the `fab/make_fab.sh` file.
+
+also give me a step-by-step guide on how to install the KiCad software on Ubuntu Linux 24.04.01 and then how to load the project files.
