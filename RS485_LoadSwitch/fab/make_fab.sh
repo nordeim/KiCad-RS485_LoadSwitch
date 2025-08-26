@@ -3,7 +3,7 @@ set -euo pipefail
 
 PROJ="RS485_LoadSwitch"
 PCB="${PROJ}.kicad_pcb"
-SCH="RS485_LoadSwitch_Main.kicad_sch"
+SCH="RS485_LoadSwitch.kicad_sch"
 REL="Release_${PROJ}_RevA_$(date +%Y%m%d)"
 
 mkdir -p "fab/${REL}/gerbers" "fab/${REL}/drill" "fab/${REL}/assembly" "fab/${REL}/3d" "fab/${REL}/docs"

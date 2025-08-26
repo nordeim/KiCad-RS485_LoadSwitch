@@ -19,7 +19,6 @@
 
   (symbol (lib_id "Diode:TVS") (at 110 50) (property "Reference" "D_RS485")(property "Value" "SM712"))
 
-
   (symbol (lib_id "Connector:Conn_01x03") (at 140 50)
     (property "Reference" "J2")(property "Value" "RS485 (A,B,GND)")
     (property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MSTBA_3_5.08mm")

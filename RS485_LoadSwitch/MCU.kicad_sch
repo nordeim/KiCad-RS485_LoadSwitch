@@ -26,5 +26,4 @@
   (symbol (lib_id "Connector_Generic:Conn_01x08") (at 160 90)
     (property "Reference" "SW_DIP")(property "Value" "DIP-8 Address")
   )
-
 )
