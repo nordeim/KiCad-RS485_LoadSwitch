@@ -23,8 +23,8 @@
     (property "Reference" "U1")(property "Value" "LM2596S-5.0")
   )
   (symbol (lib_id "Device:L") (at 160 50) (property "Reference" "L1")(property "Value" "33uH"))
+  (symbol (lib_id "Diode:D_Schottky") (at 160 60) (property "Reference" "D_BK")(property "Value" "MBR360"))
   (symbol (lib_id "Device:C") (at 120 70) (property "Reference" "CIN")(property "Value" "100uF/35V"))
-  (symbol (lib_id "Device:D_Schottky") (at 160 60) (property "Reference" "D_BK")(property "Value" "MBR360"))
   (symbol (lib_id "Device:C") (at 175 70) (property "Reference" "COUT1")(property "Value" "330uF/10V"))
   (symbol (lib_id "Device:C") (at 175 75) (property "Reference" "COUT2")(property "Value" "22uF"))
 
