@@ -1,0 +1,18 @@
+Title: RS-485 4-Channel 12V Load Controller – Rev A
+Standards: IPC-A-600/610 Class 2, RoHS (lead-free)
+Board: 2-layer FR-4, Tg ≥150°C, 1.6 mm thickness, 2 oz copper (both sides)
+Finish: ENIG (preferred) or LF HASL
+Soldermask: Green, tent all vias except designated testpoints
+Silkscreen: White, component refs and polarity must remain legible post-assembly
+Min features: 6/6 mil trace/space (logic), 20/20 mil for high-current preferred
+Holes: PTH min drill 0.30 mm (signal vias), NPTH tooling 2.5 mm, mounting M3 NPTH 3.5 mm
+Panelization: If required, 2 x 3 array with 8–10 mm rails, mousebites or V-score per fab guidelines
+Acceptability: No soldermask on pads, no silkscreen over exposed pads, no soldermask dams < 4 mil
+Electrical Test: 100% netlist test required
+Marking: Date code and lot code on back silkscreen area reserved
+Copper balance: Add thieving if required by fab; do not alter functional copper
+Stackup: Standard 2-layer, εr ~4.3, specify impedance control N/A
+Notes:
+- Observe creepage ≥1.2 mm on +12V switching nodes
+- Mounting holes NPTH; keep 6 mm copper keepout around holes
+- Keep-out around RS-485 connector for mating hardware
