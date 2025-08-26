@@ -1,0 +1,47 @@
+(kicad_sch (version 20231001) (generator "eeschema")
+  (paper "A4")
+  (title_block (title "Power Block: Reverse Batt + Buck + LDO"))
+
+  ; Power input connector J1 (Phoenix MSTBA 3-pos)
+  (symbol (lib_id "Connector:Conn_01x03") (at 30 50)
+    (property "Reference" "J1")(property "Value" "PWR_IN (Vin+, GND, SHIELD)")
+    (property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MSTBA_3_5.08mm")
+  )
+  (text "J1.1=+12V_IN  J1.2=GND  J1.3=SHIELD" (at 30 60))
+
+  ; Reverse polarity PFET IRF4905 (ideal diode high-side)
+  (symbol (lib_id "Device:Q_PMOS_GDS") (at 80 50)
+    (property "Reference" "QRP")(property "Value" "IRF4905")
+  )
+  (global_label (at 70 45) (text "+12V_IN"))
+  (global_label (at 90 45) (text "+12V_RAIL"))
+  (global_label (at 60 60) (text "GND"))
+
+  ; Input TVS SMBJ24A
+  (symbol (lib_id "Diode:TVS") (at 95 60)
+    (property "Reference" "D_IN")(property "Value" "SMBJ24A")
+  )
+
+  ; Buck LM2596-5.0
+  (symbol (lib_id "Regulator_Switching:LM2596S-5") (at 130 50)
+    (property "Reference" "U1")(property "Value" "LM2596S-5.0")
+  )
+  (symbol (lib_id "Device:L") (at 160 50) (property "Reference" "L1")(property "Value" "33uH"))
+  (symbol (lib_id "Diode:D_Schottky") (at 160 60) (property "Reference" "D_BK")(property "Value" "MBR360"))
+  (symbol (lib_id "Device:C") (at 120 70) (property "Reference" "CIN")(property "Value" "100uF/35V"))
+  (symbol (lib_id "Device:C") (at 175 70) (property "Reference" "COUT1")(property "Value" "330uF/10V"))
+  (symbol (lib_id "Device:C") (at 175 75) (property "Reference" "COUT2")(property "Value" "22uF"))
+
+  (global_label (at 180 50) (text "+5V"))
+  (global_label (at 110 80) (text "GND"))
+
+  ; LDO MCP1700-3.3
+  (symbol (lib_id "Regulator_Linear:MCP1700-3302") (at 200 50)
+    (property "Reference" "U2")(property "Value" "MCP1700-3302")
+  )
+  (symbol (lib_id "Device:C") (at 195 70) (property "Reference" "C_LDO_IN")(property "Value" "1uF"))
+  (symbol (lib_id "Device:C") (at 205 70) (property "Reference" "C_LDO_OUT")(property "Value" "1uF"))
+  (global_label (at 210 50) (text "+3V3"))
+
+  ; Notes: Place CIN near J1, tight LM2596 loop, GND star at input.
+)
