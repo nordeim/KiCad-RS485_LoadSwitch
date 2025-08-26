@@ -25,8 +25,10 @@
       (usegerberadvancedattributes true)(creategerberjobfile true))
   )
 
+  ; Board outline: 100 x 80 mm
   (gr_rect (start 0 0) (end 100 80) (layer "Edge.Cuts") (width 0.1))
 
+  ; Net classes
   (net 0 "")
   (net 1 "GND")
   (net 2 "+12V_IN")
@@ -74,6 +76,7 @@
     (add_net "RS485_A")(add_net "RS485_B")
   )
 
+  ; Copper zones for +12V_RAIL and GND (fill with 'B')
   (zone (net 1) (net_name "GND") (layer "B.Cu") (hatch edge 0.5) (priority 1)
     (connect_pads (clearance 0.3)) (min_thickness 0.25)
     (polygon (pts (xy 0 0) (xy 100 0) (xy 100 80) (xy 0 80))))
@@ -81,7 +84,10 @@
     (connect_pads (clearance 0.4)) (min_thickness 0.3)
     (polygon (pts (xy 60 0) (xy 100 0) (xy 100 80) (xy 60 80))))
 
+  ; Footprints are embedded with essential pads for board integrity and basic routing.
+  ; For brevity, only key footprints appear below. Pads are net-assigned; zones complete connections.
 
+  ; J1 Power In (left edge)
   (footprint "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" (layer "F.Cu") (at 5 10)
     (attr through_hole)
     (fp_text reference "J1" (at 0 -3))
@@ -91,6 +97,7 @@
     (pad "3" thru_hole circle (at 5.0 0) (size 2.2 2.2) (drill 1.2) (layers *.Cu *.Mask) (net 1 "GND"))
   )
 
+  ; Reverse PFET IRF4905 (TO-220, near J1)
   (footprint "Package_TO_SOT_THT:TO-220-3_Vertical" (layer "F.Cu") (at 20 15)
     (attr through_hole)
     (fp_text reference "QRP")(fp_text value "IRF4905")
@@ -99,12 +106,14 @@
     (pad "3" thru_hole oval (at 5.08 0) (size 1.7 2.0) (drill 1.0) (layers *.Cu *.Mask) (net 3 "+12V_RAIL"))  ; S
   )
 
+  ; Input TVS
   (footprint "Diode_SMD:D_SMB" (layer "F.Cu") (at 15 25)
     (fp_text reference "D_IN")(fp_text value "SMBJ24A")
     (pad "1" smd rect (at -2 0) (size 2.5 2.0) (layers "F.Cu" "F.Mask") (net 3 "+12V_RAIL"))
     (pad "2" smd rect (at 2 0) (size 2.5 2.0) (layers "F.Cu" "F.Mask") (net 1 "GND"))
   )
 
+  ; LM2596 buck (TO-263-5), inductor, diode, output caps
   (footprint "Package_TO_SOT_SMD:TO-263-5_TabPin3" (layer "F.Cu") (at 20 40)
     (fp_text reference "U1")(fp_text value "LM2596S-5.0")
     (pad "1" smd rect (at -6.8 -2.54) (size 3 1.8) (layers "F.Cu" "F.Mask") (net 3 "+12V_RAIL"))
@@ -134,6 +143,7 @@
     (pad "2" smd rect (at 1.5 0) (size 1.6 1.2) (layers "F.Cu" "F.Mask") (net 1 "GND"))
   )
 
+  ; LDO MCP1700
   (footprint "Package_TO_SOT_SMD:SOT-23" (layer "F.Cu") (at 55 25)
     (fp_text reference "U2")(fp_text value "MCP1700-3302")
     (pad "1" smd rect (at -1 0.95) (size 1 0.9) (layers "F.Cu" "F.Mask") (net 4 "+5V"))
@@ -141,6 +151,7 @@
     (pad "3" smd rect (at 1 0) (size 1 0.9) (layers "F.Cu" "F.Mask") (net 5 "+3V3"))
   )
 
+  ; RS-485 transceiver and connector (top-left)
   (footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (layer "F.Cu") (at 15 70)
     (fp_text reference "U3")(fp_text value "THVD1450")
     (pad "1" smd rect (at -1.905 -2.54) (size 1.5 0.6) (layers "F.Cu" "F.Mask") (net 9 "UART_RX"))
@@ -158,6 +169,7 @@
     (pad "2" thru_hole circle (at 2.5 0) (size 2.2 2.2) (drill 1.2) (layers *.Cu *.Mask) (net 7 "RS485_B"))
     (pad "3" thru_hole circle (at 5.0 0) (size 2.2 2.2) (drill 1.2) (layers *.Cu *.Mask) (net 1 "GND"))
   )
+  ; SM712 TVS near J2
   (footprint "Package_TO_SOT_SMD:SOT-23-6" (layer "F.Cu") (at 10 55)
     (fp_text reference "D_RS485")(fp_text value "SM712")
     (pad "1" smd rect (at -1 0.95) (size 0.6 0.5) (layers "F.Cu" "F.Mask") (net 6 "RS485_A"))
@@ -168,15 +180,20 @@
     (pad "6" smd rect (at 1 -0.95) (size 0.6 0.5) (layers "F.Cu" "F.Mask") (net 7 "RS485_B"))
   )
 
+  ; MCU STM32F103C8T6 (center-left)
   (footprint "Package_QFP:LQFP-48_7x7mm_P0.5mm" (layer "F.Cu") (at 35 30)
     (fp_text reference "U4")(fp_text value "STM32F103C8T6")
     (pad "1" smd rect (at -3.5 -3.5) (size 0.3 1.5) (layers "F.Cu" "F.Mask") (net 5 "+3V3"))
+    ; ... pads omitted for brevity ...
   )
 
+  ; TC4468 gate driver near MOSFETs (right-center)
   (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (layer "F.Cu") (at 70 40)
     (fp_text reference "U5")(fp_text value "TC4468")
+    ; Hook IN pins to PWM1..PWM4 (nets 11..14) and OUT pins to gate nets
   )
 
+  ; Four MOSFET channels vertically along right edge with outputs J_OUTx
   (footprint "Package_TO_SOT_THT:TO-220-3_Vertical" (layer "F.Cu") (at 85 20)
     (fp_text reference "Q1")(fp_text value "IRLZ44N")
     (pad "1" thru_hole rect (at 0 0) (size 1.7 2.0) (drill 1.0) (layers *.Cu *.Mask)) ; G via TC4468 OUT1
@@ -204,13 +221,20 @@
     (pad "2" thru_hole circle (at 3.96 0) (size 2.6 2.6) (drill 1.3) (layers *.Cu *.Mask) (net 15 "OUT1"))
   )
 
+  ; Duplicate footprints for channels 2..4 (positions shifted)
+  ; Q2/R_SHUNT2/D_FREE2/D_TVS2/J_OUT2
+  ; Q3/R_SHUNT3/D_FREE3/D_TVS3/J_OUT3
+  ; Q4/R_SHUNT4/D_FREE4/D_TVS4/J_OUT4
 
+  ; GND stitching vias in pours (add more as needed)
   (via (at 50 50) (size 1.2) (drill 0.6) (layers "F.Cu" "B.Cu") (net 1))
   (via (at 60 50) (size 1.2) (drill 0.6) (layers "F.Cu" "B.Cu") (net 1))
 
+  ; Minimal tracks shown; pours complete most connections after filling.
   (segment (start 5 10) (end 20 15) (width 1.0) (layer "F.Cu") (net 2)) ; +12V_IN to PFET
   (segment (start 25 15) (end 60 15) (width 2.5) (layer "F.Cu") (net 3)) ; +12V_RAIL spine
   (segment (start 95 10) (end 95 15) (width 3.0) (layer "F.Cu") (net 3)) ; to outputs
 
+  ; Silks
   (gr_text "RS-485 4-CH 12V Load Ctrl / PWM" (at 50 78) (layer "F.SilkS") (size 1.5 1.5) (thickness 0.25))
 )

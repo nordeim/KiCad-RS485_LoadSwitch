@@ -13,13 +13,17 @@
   (global_label (at 90 45) (text "RS485_A"))
   (global_label (at 90 55) (text "RS485_B"))
 
+  ; Bias resistors (jumper-selectable in PCB)
   (symbol (lib_id "Device:R") (at 80 40) (property "Reference" "R_A_BIAS")(property "Value" "680"))
   (symbol (lib_id "Device:R") (at 80 60) (property "Reference" "R_B_BIAS")(property "Value" "680"))
   (symbol (lib_id "Device:R") (at 90 50) (property "Reference" "R_TERM")(property "Value" "120"))
 
+  ; TVS SM712 across A/B
   (symbol (lib_id "Diode:TVS") (at 110 50) (property "Reference" "D_RS485")(property "Value" "SM712"))
 
+  ; Optional common-mode choke footprint is on PCB between transceiver and connector
 
+  ; RS-485 connector J2
   (symbol (lib_id "Connector:Conn_01x03") (at 140 50)
     (property "Reference" "J2")(property "Value" "RS485 (A,B,GND)")
     (property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MSTBA_3_5.08mm")

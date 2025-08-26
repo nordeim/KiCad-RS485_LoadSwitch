@@ -2,34 +2,42 @@
   (paper "A4")
   (title_block (title "Load Channel: IRLZ44N + Flyback + TVS + INA180"))
 
+  ; Inputs: +12V_RAIL, GND, CTRL_5V
   (global_label (at 30 30) (text "+12V_RAIL"))
   (global_label (at 30 35) (text "GND"))
   (global_label (at 30 40) (text "CTRL_5V"))
 
+  ; MOSFET IRLZ44N (low-side)
   (symbol (lib_id "Device:Q_NMOS_GDS") (at 90 50)
     (property "Reference" "Qx")(property "Value" "IRLZ44N")
   )
   (symbol (lib_id "Device:R") (at 80 45) (property "Reference" "R_G")(property "Value" "22"))
   (symbol (lib_id "Device:R") (at 80 55) (property "Reference" "R_PD")(property "Value" "100k"))
 
+  ; Freewheel diode to +12V
   (symbol (lib_id "Diode:D_Schottky") (at 110 45)
     (property "Reference" "D_FREE")(property "Value" "STPS3L60")
   )
+  ; Output TVS to +12V
   (symbol (lib_id "Diode:TVS") (at 115 50)
     (property "Reference" "D_TVS")(property "Value" "SMBJ33A")
   )
 
+  ; Current shunt and INA180
   (symbol (lib_id "Device:R") (at 90 65) (property "Reference" "R_SHUNT")(property "Value" "0.05R 1W"))
   (symbol (lib_id "Device:U") (at 120 65) (property "Reference" "U_SNS")(property "Value" "INA180A1"))
 
+  ; Output connector
   (symbol (lib_id "Connector:Conn_01x02") (at 140 45)
     (property "Reference" "J_OUTx")(property "Value" "+12V / OUTx")
     (property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MSTBA_2_5.08mm")
   )
 
+  ; Output LED (+12V -> 2.2k -> LED -> OUT)
   (symbol (lib_id "Device:LED") (at 125 35) (property "Reference" "LEDx")(property "Value" "GREEN"))
   (symbol (lib_id "Device:R") (at 120 35) (property "Reference" "R_LED")(property "Value" "2.2k"))
 
+  ; Exposed pins
   (global_label (at 150 50) (text "OUT#"))
   (global_label (at 150 70) (text "ADC_SNS#"))
 )

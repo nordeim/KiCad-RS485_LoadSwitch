@@ -19,12 +19,15 @@
   (global_label (at 140 95) (text "ADC_SNS3"))
   (global_label (at 140 100) (text "ADC_SNS4"))
 
+  ; SWD header
   (symbol (lib_id "Connector:Conn_01x05") (at 160 60)
     (property "Reference" "J_SWD")(property "Value" "SWD 1x5")
   )
 
+  ; DIP address (8 switches)
   (symbol (lib_id "Connector_Generic:Conn_01x08") (at 160 90)
     (property "Reference" "SW_DIP")(property "Value" "DIP-8 Address")
   )
 
+  ; Decoupling caps and crystal optional (HSI OK) are placed near VDD pins in PCB
 )

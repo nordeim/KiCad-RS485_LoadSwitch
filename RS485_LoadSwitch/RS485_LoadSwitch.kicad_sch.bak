@@ -8,12 +8,14 @@
     (comment 3 "TVS: SMBJ24A (input), SM712 (RS-485), SMBJ33A (outputs)")
   )
 
+  ; Global power nets
   (global_label (shape input) (at 30 20) (text "+12V_IN"))
   (global_label (shape input) (at 30 25) (text "+12V_RAIL"))
   (global_label (shape input) (at 30 30) (text "+5V"))
   (global_label (shape input) (at 30 35) (text "+3V3"))
   (global_label (shape input) (at 30 40) (text "GND"))
 
+  ; Sheet: Power
   (sheet (at 30 60) (size 140 80)
     (property "Sheet name" "Power")
     (property "Sheet file" "Power.kicad_sch")
@@ -24,6 +26,7 @@
     (pin (uuid 5) (at 30 90) (name "+3V3") (shape output))
   )
 
+  ; Sheet: RS-485
   (sheet (at 180 60) (size 140 60)
     (property "Sheet name" "RS485")
     (property "Sheet file" "RS485.kicad_sch")
@@ -36,6 +39,7 @@
     (pin (uuid 16) (at 180 100) (name "RS485_B") (shape bidirectional))
   )
 
+  ; Sheet: MCU
   (sheet (at 30 150) (size 150 90)
     (property "Sheet name" "MCU")
     (property "Sheet file" "MCU.kicad_sch")
@@ -54,6 +58,7 @@
     (pin (uuid 32) (at 30 220) (name "ADC_SNS4") (shape input))
   )
 
+  ; Sheet: Gate Driver (TC4468)
   (sheet (at 200 150) (size 120 70)
     (property "Sheet name" "GateDriver")
     (property "Sheet file" "GateDriver.kicad_sch")
@@ -69,6 +74,7 @@
     (pin (uuid 49) (at 200 205) (name "OUT4_5V") (shape output))
   )
 
+  ; 4x Channel sheets
   (sheet (at 360 60) (size 120 70)
     (property "Sheet name" "Channel1")
     (property "Sheet file" "Channel.kicad_sch")
@@ -110,5 +116,6 @@
     (pin (uuid 94) (at 360 325) (name "ADC_SNS4") (shape output))
   )
 
+  ; Global labels to tie sheets
   (text "Tie nets via global labels. No explicit wires needed at top level.")
 )
