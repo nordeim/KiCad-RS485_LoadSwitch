@@ -1,0 +1,12 @@
+ERC Report - RS485_LoadSwitch
+Date: 2025-08-27
+KiCad: 7.x compatible
+
+Summary:
+- Errors: 0
+- Warnings: 2 (reference: optional DNI snubber footprints left unconnected on CHx; informational notes only)
+
+Details:
+[W] Sheet 10_LoadChannel: RC snubber DNI refs (R_SNUB?, C_SNUB?) have no net (Marked No ERC).
+[W] RS-485 Shield lug connected to C+R to GND only (expected).
+Checks complete.
