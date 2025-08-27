@@ -1,0 +1,12 @@
+(fp_lib_table
+  (lib (name Connector_Phoenix)(type KiCad)(uri ${KISYS3DMOD}/Connector_Phoenix.pretty)(options "")(descr "Phoenix connectors"))
+  (lib (name Package_TO_SOT_SMD)(type KiCad)(uri ${KISYS3DMOD}/Package_TO_SOT_SMD.pretty)(options "")(descr "SMD TO/SOT"))
+  (lib (name Package_TO_SOT_THT)(type KiCad)(uri ${KISYS3DMOD}/Package_TO_SOT_THT.pretty)(options "")(descr "THT TO/SOT"))
+  (lib (name Resistor_SMD)(type KiCad)(uri ${KISYS3DMOD}/Resistor_SMD.pretty)(options "")(descr "SMD resistors"))
+  (lib (name Capacitor_SMD)(type KiCad)(uri ${KISYS3DMOD}/Capacitor_SMD.pretty)(options "")(descr "SMD capacitors"))
+  (lib (name Diode_SMD)(type KiCad)(uri ${KISYS3DMOD}/Diode_SMD.pretty)(options "")(descr "SMD diodes"))
+  (lib (name Inductor_SMD)(type KiCad)(uri ${KISYS3DMOD}/Inductor_SMD.pretty)(options "")(descr "SMD inductors"))
+  (lib (name Housings_QFP)(type KiCad)(uri ${KISYS3DMOD}/Housings_QFP.pretty)(options "")(descr "QFP"))
+  (lib (name Connector_PinHeader_2.54mm)(type KiCad)(uri ${KISYS3DMOD}/Connector_PinHeader_2.54mm.pretty)(options "")(descr "Pin headers"))
+  (lib (name MountingHole)(type KiCad)(uri ${KISYS3DMOD}/MountingHole.pretty)(options "")(descr "Mounting holes"))
+)
