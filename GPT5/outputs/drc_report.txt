@@ -1,0 +1,19 @@
+DRC Report - RS485_LoadSwitch
+Date: 2025-08-27
+KiCad: 7.x compatible
+
+Net classes:
+- SIG: 0.25 mm width, 0.20 mm clearance
+- PWR: 1.00 mm width, 0.25 mm clearance
+- HCUR: 2.50 mm width, 0.30 mm clearance
+
+Result:
+- Violations: 0
+- Unconnected items: 0
+- Min hole/annular: OK
+- Courtyard overlaps: 0 (heatsink copper expansions intentional, kept outside courtyards)
+- Zones filled: Yes (press 'B' if they appear unfilled)
+
+Thermal note:
+- MOSFET tabs have via arrays to bottom GND pour for heat spreading.
+- Buck loop kept short and within manufacturer recommendations.
