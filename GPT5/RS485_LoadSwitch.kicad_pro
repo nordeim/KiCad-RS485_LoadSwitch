@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "version": 1
+  },
+  "board": {
+    "design_settings": {
+      "defaults": {
+        "track_width": 0.25,
+        "track_clearance": 0.2,
+        "via_dia": 1.2,
+        "via_drill": 0.6
+      },
+      "rule_severities": {},
+      "tracks_widths": [
+        {"name": "SIG", "value": 0.25},
+        {"name": "PWR", "value": 1.0},
+        {"name": "HCUR", "value": 2.5}
+      ],
+      "via_dimensions": [],
+      "layers": []
+    },
+    "page_layout_descr_file": "",
+    "plot_parameters": {
+      "output_directory": "outputs/plots"
+    }
+  },
+  "schematic": {
+    "annotate_options": {
+      "sort_by_x_then_y": true,
+      "keep_existing_annotations": false,
+      "update_fields": true
+    },
+    "legacy_lib_dir": "",
+    "ngspice": {
+      "use_legacy_pspice_models": false
+    },
+    "plot_directory": "outputs/plots"
+  },
+  "project": {
+    "files": [
+      "RS485_LoadSwitch.kicad_sch",
+      "RS485_LoadSwitch.kicad_pcb"
+    ],
+    "title": "RS-485 4-Channel 12V Load Controller",
+    "company": "",
+    "rev": "A1",
+    "date": ""
+  }
+}
