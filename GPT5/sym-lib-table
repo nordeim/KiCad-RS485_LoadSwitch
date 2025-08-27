@@ -1,0 +1,11 @@
+(sym_lib_table
+  (lib (name Device)(type Legacy)(uri ${KICAD6_SYMBOL_DIR}/Device.lib)(options "")(descr "Device symbols"))
+  (lib (name Connector)(type Legacy)(uri ${KICAD6_SYMBOL_DIR}/Connector.lib)(options "")(descr "Connectors"))
+  (lib (name MCU_ST_STM32)(type Legacy)(uri ${KICAD6_SYMBOL_DIR}/MCU_ST_STM32.lib)(options "")(descr "ST STM32 MCUs"))
+  (lib (name Regulator_Switching)(type Legacy)(uri ${KICAD6_SYMBOL_DIR}/Regulator_Switching.lib)(options "")(descr "Switching Regulators"))
+  (lib (name Regulator_Linear)(type Legacy)(uri ${KICAD6_SYMBOL_DIR}/Regulator_Linear.lib)(options "")(descr "Linear Regulators"))
+  (lib (name Interface_UART)(type Legacy)(uri ${KICAD6_SYMBOL_DIR}/Interface_UART.lib)(options "")(descr "Interface UART/RS-485"))
+  (lib (name Amplifier_Current)(type Legacy)(uri ${KICAD6_SYMBOL_DIR}/Amplifier_Current.lib)(options "")(descr "Current sense amplifiers"))
+  (lib (name Diode)(type Legacy)(uri ${KICAD6_SYMBOL_DIR}/Diode.lib)(options "")(descr "Diodes"))
+  (lib (name Logic_LevelTranslator)(type Legacy)(uri ${KICAD6_SYMBOL_DIR}/Logic_LevelTranslator.lib)(options "")(descr "Logic/Driver IC"))
+)
