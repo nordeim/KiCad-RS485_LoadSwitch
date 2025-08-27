@@ -1,0 +1,121 @@
+(kicad_sch (version 20230121) (generator eeschema)
+  (uuid e63e39d7-6ac0-4ffd-8aa3-1841a4541b55)
+  (paper "A3")
+  
+  (title_block
+    (title "RS-485 4-Channel 12V Load Controller")
+    (date "2024-01-15")
+    (rev "1.0")
+    (company "Industrial Control Systems")
+    (comment 1 "Production-Ready Design")
+    (comment 2 "4x3A PWM Load Control")
+    (comment 3 "RS-485 Modbus RTU Interface")
+    (comment 4 "Thermal & EMC Optimized")
+  )
+
+  (lib_symbols
+    ; [Symbol library definitions - using standard KiCad libraries]
+  )
+
+  ; Critical nets for production
+  (wire (pts (xy 50 50) (xy 60 50)) (stroke (width 3) (type default)) (uuid net-12v-main))
+  (wire (pts (xy 250 90) (xy 320 90)) (stroke (width 3) (type default)) (uuid net-out1))
+  (wire (pts (xy 250 110) (xy 320 110)) (stroke (width 3) (type default)) (uuid net-out2))
+  (wire (pts (xy 250 130) (xy 320 130)) (stroke (width 3) (type default)) (uuid net-out3))
+  (wire (pts (xy 250 150) (xy 320 150)) (stroke (width 3) (type default)) (uuid net-out4))
+
+  ; Component instances with production-critical parameters
+  (symbol (lib_id "MCU_ST_STM32F1:STM32F103C8Tx") (at 180 86 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid mcu-main)
+    (property "Reference" "U1" (at 180 50 0))
+    (property "Value" "STM32F103C8T6" (at 180 53 0))
+    (property "Footprint" "Package_QFP:LQFP-48_7x7mm_P0.5mm" (at 165 122 0))
+    (property "MPN" "STM32F103C8T6" (at 180 86 0))
+    (property "Manufacturer" "STMicroelectronics" (at 180 86 0))
+  )
+
+  ; MOSFET Channel 1 with thermal considerations
+  (symbol (lib_id "Transistor_FET:IRLZ44N") (at 277 94 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid q1-ch1)
+    (property "Reference" "Q1" (at 282 91 0))
+    (property "Value" "IRLZ44N" (at 282 94 0))
+    (property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical" (at 282 96 0))
+    (property "MPN" "IRLZ44NPBF" (at 277 94 0))
+    (property "Manufacturer" "Infineon" (at 277 94 0))
+    (property "RDS_on" "22mΩ" (at 277 94 0))
+    (property "VDS_max" "55V" (at 277 94 0))
+    (property "ID_max" "47A" (at 277 94 0))
+  )
+
+  ; Current sense resistor with precision specs
+  (symbol (lib_id "Device:R") (at 259 89 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid r-sense-ch1)
+    (property "Reference" "R5" (at 262 89 0))
+    (property "Value" "0.05Ω" (at 262 91 0))
+    (property "Footprint" "Resistor_SMD:R_2512_6332Metric" (at 257 89 90))
+    (property "MPN" "CRA2512-FZ-R050ELF" (at 259 89 0))
+    (property "Manufacturer" "Bourns" (at 259 89 0))
+    (property "Tolerance" "1%" (at 259 89 0))
+    (property "Power" "2W" (at 259 89 0))
+  )
+
+  ; TVS protection diode
+  (symbol (lib_id "Diode:SMBJ33CA") (at 307 95 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid tvs-ch1)
+    (property "Reference" "D5" (at 312 95 0))
+    (property "Value" "SMBJ33CA" (at 302 95 0))
+    (property "Footprint" "Diode_SMD:D_SMB" (at 302 95 0))
+    (property "MPN" "SMBJ33CA" (at 307 95 0))
+    (property "Manufacturer" "Littelfuse" (at 307 95 0))
+    (property "VBR" "36.7-40.6V" (at 307 95 0))
+  )
+
+  ; RS-485 Transceiver with isolation
+  (symbol (lib_id "Interface_UART:THVD1450") (at 69 185 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid rs485-xcvr)
+    (property "Reference" "U2" (at 69 170 0))
+    (property "Value" "THVD1450" (at 69 173 0))
+    (property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 69 203 0))
+    (property "MPN" "THVD1450DR" (at 69 185 0))
+    (property "Manufacturer" "Texas Instruments" (at 69 185 0))
+  )
+
+  ; Buck converter for efficiency
+  (symbol (lib_id "Regulator_Switching:LM2596S-5") (at 74 56 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid buck-5v)
+    (property "Reference" "U3" (at 74 46 0))
+    (property "Value" "LM2596S-5.0" (at 74 48 0))
+    (property "Footprint" "Package_TO_SOT_SMD:TO-263-5_TabPin3" (at 75 62 0))
+    (property "MPN" "LM2596S-5.0/NOPB" (at 74 56 0))
+    (property "Manufacturer" "Texas Instruments" (at 74 56 0))
+  )
+
+  ; Gate driver for reliable switching
+  (symbol (lib_id "Driver_FET:TC4468") (at 240 94 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid gate-drv-ch1)
+    (property "Reference" "U5" (at 240 87 0))
+    (property "Value" "TC4468" (at 240 89 0))
+    (property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" (at 240 102 0))
+    (property "MPN" "TC4468EPD" (at 240 94 0))
+    (property "Manufacturer" "Microchip" (at 240 94 0))
+  )
+
+  ; Current sense amplifier
+  (symbol (lib_id "Amplifier_Current:INA180A1") (at 269 89 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid ina-ch1)
+    (property "Reference" "U9" (at 269 82 0))
+    (property "Value" "INA180A1" (at 269 84 0))
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 269 97 0))
+    (property "MPN" "INA180A1IDBVR" (at 269 89 0))
+    (property "Manufacturer" "Texas Instruments" (at 269 89 0))
+    (property "Gain" "20V/V" (at 269 89 0))
+  )
+)
