@@ -1,3 +1,0 @@
-Expecting 'symbol' in '/Home1/project/kicad-3/Opus-4.1/RS485_LoadSwitch.kicad_sch', line 1048, offset 11.
-
-Expecting '(' in '/Home1/project/kicad-3/Opus-4.1/RS485_LoadSwitch.kicad_pcb', line 150, offset 3.
