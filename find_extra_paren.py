@@ -81,7 +81,7 @@ def analyze_full_lib_symbols(filepath):
                 print(f"⚠️ Symbol '{current_symbol}' has unclosed parens: balance={symbol_balance}")
                 
             import re
-            match = re.search(r'\(symbol\s+"([^"]+)"', line)
+            match = re.search(r'KATEX_INLINE_OPENsymbol\s+"([^"]+)"', line)
             if match:
                 current_symbol = match.group(1)
                 symbol_start_line = line_num + 1
