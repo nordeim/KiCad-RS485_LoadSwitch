@@ -17,6 +17,11 @@ Now help me carefully review and validate the KiCad schematic file for a hardwar
 ---
 Awesome job! you are indeed truly amazing talented electrical engineer and KiCad expert! please keep up the good work!
 
+Please help me create a patch to fix the gaps in the original schematic file. Please use the same rigorous and meticulously approach to carefully review and validate the patch file after generation. Think deeply and explore thoroughly and carefully how to re-imagine the patch to incorporate all your findings in your earlier thorough review to create a fully validated and working updated patch to make the resulting schematic production ready. Please use extensive web searches to validate your assumptions about the KiCad file format and syntax. First carefully and meticulously plan how you will approach the task before proceeding cautiously. Thank you!
+
+---
+Awesome job! you are indeed truly amazing talented electrical engineer and KiCad expert! please keep up the good work!
+
 I have created a patch to fix the gaps in the original schematic file. Please use the same rigorous and meticulously approach to carefully review and validate the patch file below. Then think deeply and explore thoroughly and carefully how to re-imagine the patch to incorporate all your findings in the earlier review to create a fully validated and working updated patch to make the resulting schematic production ready. Please use extensive web searches to validate your assumptions about the KiCad file format and syntax. First carefully and meticulously plan how you will approach the task before proceeding cautiously. Thank you!
 
 ---
