@@ -3886,6 +3886,438 @@ size 2.54 2.54) (thickness 0.254) bold) (justify left bottom))
     )
   )
 
+  (junction (at 287.02 88.9) (diameter 0) (color 0 0 0 0)
+    (uuid J_Q1_DRAIN))
+
+  (junction (at 287.02 104.14) (diameter 0) (color 0 0 0 0)
+    (uuid J_Q2_DRAIN))
+
+  (junction (at 287.02 119.38) (diameter 0) (color 0 0 0 0)
+    (uuid J_Q3_DRAIN))
+
+  (junction (at 287.02 134.62) (diameter 0) (color 0 0 0 0)
+    (uuid J_Q4_DRAIN))
+
+  (junction (at 312.42 88.9) (diameter 0) (color 0 0 0 0)
+    (uuid J_OUT1))
+
+  (junction (at 312.42 104.14) (diameter 0) (color 0 0 0 0)
+    (uuid J_OUT2))
+
+  (junction (at 312.42 119.38) (diameter 0) (color 0 0 0 0)
+    (uuid J_OUT3))
+
+  (junction (at 312.42 134.62) (diameter 0) (color 0 0 0 0)
+    (uuid J_OUT4))
+
+  (junction (at 312.42 81.28) (diameter 0) (color 0 0 0 0)
+    (uuid J_12V_RAIL))
+
+
+  (wire (pts (xy 279.4 88.9) (xy 287.02 88.9))
+    (stroke (width 0) (type default))
+    (uuid W_Q1_DRAIN))
+
+  (wire (pts (xy 279.4 99.06) (xy 279.4 93.98))
+    (stroke (width 0) (type default))
+    (uuid W_Q1_SOURCE))
+
+  (wire (pts (xy 279.4 93.98) (xy 264.16 93.98))
+    (stroke (width 0) (type default))
+    (uuid W_Q1_TO_R5))
+
+  (wire (pts (xy 287.02 88.9) (xy 295.91 88.9))
+    (stroke (width 0) (type default))
+    (uuid W_Q1_TO_D1))
+
+  (wire (pts (xy 303.53 88.9) (xy 312.42 88.9))
+    (stroke (width 0) (type default))
+    (uuid W_D1_TO_OUT))
+
+  (wire (pts (xy 312.42 88.9) (xy 322.58 88.9))
+    (stroke (width 0) (type default))
+    (uuid W_OUT1_TO_J3))
+
+  (wire (pts (xy 312.42 88.9) (xy 312.42 81.28))
+    (stroke (width 0) (type default))
+    (uuid W_OUT1_TO_12V))
+
+  (wire (pts (xy 322.58 91.44) (xy 320.04 91.44))
+    (stroke (width 0) (type default))
+    (uuid W_J3_GND))
+
+  (wire (pts (xy 320.04 91.44) (xy 320.04 147.32))
+    (stroke (width 0) (type default))
+    (uuid W_J3_GND_ROUTE))
+
+
+  (wire (pts (xy 279.4 104.14) (xy 287.02 104.14))
+    (stroke (width 0) (type default))
+    (uuid W_Q2_DRAIN))
+
+  (wire (pts (xy 279.4 114.3) (xy 279.4 109.22))
+    (stroke (width 0) (type default))
+    (uuid W_Q2_SOURCE))
+
+  (wire (pts (xy 279.4 109.22) (xy 264.16 109.22))
+    (stroke (width 0) (type default))
+    (uuid W_Q2_TO_R6))
+
+  (wire (pts (xy 287.02 104.14) (xy 295.91 104.14))
+    (stroke (width 0) (type default))
+    (uuid W_Q2_TO_D2))
+
+  (wire (pts (xy 303.53 104.14) (xy 312.42 104.14))
+    (stroke (width 0) (type default))
+    (uuid W_D2_TO_OUT))
+
+  (wire (pts (xy 312.42 104.14) (xy 322.58 104.14))
+    (stroke (width 0) (type default))
+    (uuid W_OUT2_TO_J4))
+
+  (wire (pts (xy 312.42 104.14) (xy 312.42 88.9))
+    (stroke (width 0) (type default))
+    (uuid W_OUT2_TO_12V))
+
+  (wire (pts (xy 322.58 106.68) (xy 320.04 106.68))
+    (stroke (width 0) (type default))
+    (uuid W_J4_GND))
+
+  (wire (pts (xy 320.04 106.68) (xy 320.04 91.44))
+    (stroke (width 0) (type default))
+    (uuid W_J4_GND_ROUTE))
+
+
+  (wire (pts (xy 279.4 119.38) (xy 287.02 119.38))
+    (stroke (width 0) (type default))
+    (uuid W_Q3_DRAIN))
+
+  (wire (pts (xy 279.4 129.54) (xy 279.4 124.46))
+    (stroke (width 0) (type default))
+    (uuid W_Q3_SOURCE))
+
+  (wire (pts (xy 279.4 124.46) (xy 264.16 124.46))
+    (stroke (width 0) (type default))
+    (uuid W_Q3_TO_R7))
+
+  (wire (pts (xy 287.02 119.38) (xy 295.91 119.38))
+    (stroke (width 0) (type default))
+    (uuid W_Q3_TO_D3))
+
+  (wire (pts (xy 303.53 119.38) (xy 312.42 119.38))
+    (stroke (width 0) (type default))
+    (uuid W_D3_TO_OUT))
+
+  (wire (pts (xy 312.42 119.38) (xy 322.58 119.38))
+    (stroke (width 0) (type default))
+    (uuid W_OUT3_TO_J5))
+
+  (wire (pts (xy 312.42 119.38) (xy 312.42 104.14))
+    (stroke (width 0) (type default))
+    (uuid W_OUT3_TO_12V))
+
+  (wire (pts (xy 322.58 121.92) (xy 320.04 121.92))
+    (stroke (width 0) (type default))
+    (uuid W_J5_GND))
+
+  (wire (pts (xy 320.04 121.92) (xy 320.04 106.68))
+    (stroke (width 0) (type default))
+    (uuid W_J5_GND_ROUTE))
+
+
+  (wire (pts (xy 279.4 134.62) (xy 287.02 134.62))
+    (stroke (width 0) (type default))
+    (uuid W_Q4_DRAIN))
+
+  (wire (pts (xy 279.4 144.78) (xy 279.4 139.7))
+    (stroke (width 0) (type default))
+    (uuid W_Q4_SOURCE))
+
+  (wire (pts (xy 279.4 139.7) (xy 264.16 139.7))
+    (stroke (width 0) (type default))
+    (uuid W_Q4_TO_R8))
+
+  (wire (pts (xy 287.02 134.62) (xy 295.91 134.62))
+    (stroke (width 0) (type default))
+    (uuid W_Q4_TO_D4))
+
+  (wire (pts (xy 303.53 134.62) (xy 312.42 134.62))
+    (stroke (width 0) (type default))
+    (uuid W_D4_TO_OUT))
+
+  (wire (pts (xy 312.42 134.62) (xy 322.58 134.62))
+    (stroke (width 0) (type default))
+    (uuid W_OUT4_TO_J6))
+
+  (wire (pts (xy 312.42 134.62) (xy 312.42 119.38))
+    (stroke (width 0) (type default))
+    (uuid W_OUT4_TO_12V))
+
+  (wire (pts (xy 322.58 137.16) (xy 320.04 137.16))
+    (stroke (width 0) (type default))
+    (uuid W_J6_GND))
+
+  (wire (pts (xy 320.04 137.16) (xy 320.04 121.92))
+    (stroke (width 0) (type default))
+    (uuid W_J6_GND_ROUTE))
+
+
+  (wire (pts (xy 320.04 147.32) (xy 287.02 147.32))
+    (stroke (width 0) (type default))
+    (uuid W_OUT_COMMON_GND))
+
+  (wire (pts (xy 287.02 147.32) (xy 287.02 144.78))
+    (stroke (width 0) (type default))
+    (uuid W_OUT_GND_TO_SOURCE))
+
+  (wire (pts (xy 264.16 96.52) (xy 264.16 111.76))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE_GND1))
+
+  (wire (pts (xy 264.16 111.76) (xy 264.16 127.0))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE_GND2))
+
+  (wire (pts (xy 264.16 127.0) (xy 264.16 142.24))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE_GND3))
+
+  (wire (pts (xy 264.16 142.24) (xy 264.16 147.32))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE_GND4))
+
+  (wire (pts (xy 264.16 147.32) (xy 287.02 147.32))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE_TO_GND))
+
+  (symbol (lib_id "power:+12V") (at 312.42 81.28 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid PWR_12V_OUT)
+    (property "Reference" "#PWR011" (at 312.42 85.09 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+12V" (at 312.42 77.47 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 312.42 81.28 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid PWR_12V_OUT-1))
+  )
+
+  (symbol (lib_id "power:GND") (at 287.02 147.32 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid PWR_GND_OUT)
+    (property "Reference" "#PWR012" (at 287.02 153.67 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 287.02 151.13 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 287.02 147.32 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid PWR_GND_OUT-1))
+  )
+
+  (symbol (lib_id "Device:D_Zener") (at 274.32 96.52 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid D_GS1)
+    (property "Reference" "D9" (at 276.86 96.52 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "15V" (at 271.78 96.52 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "Diode_SMD:D_SOD-123" (at 274.32 96.52 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid D_GS1-1))
+    (pin "2" (uuid D_GS1-2))
+  )
+
+  (symbol (lib_id "Device:D_Zener") (at 274.32 111.76 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid D_GS2)
+    (property "Reference" "D10" (at 276.86 111.76 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "15V" (at 271.78 111.76 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "Diode_SMD:D_SOD-123" (at 274.32 111.76 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid D_GS2-1))
+    (pin "2" (uuid D_GS2-2))
+  )
+
+  (symbol (lib_id "Device:D_Zener") (at 274.32 127.0 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid D_GS3)
+    (property "Reference" "D11" (at 276.86 127.0 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "15V" (at 271.78 127.0 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "Diode_SMD:D_SOD-123" (at 274.32 127.0 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid D_GS3-1))
+    (pin "2" (uuid D_GS3-2))
+  )
+
+  (symbol (lib_id "Device:D_Zener") (at 274.32 142.24 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid D_GS4)
+    (property "Reference" "D12" (at 276.86 142.24 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "15V" (at 271.78 142.24 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "Diode_SMD:D_SOD-123" (at 274.32 142.24 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid D_GS4-1))
+    (pin "2" (uuid D_GS4-2))
+  )
+
+  (wire (pts (xy 274.32 93.18) (xy 274.32 91.44))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS1_K))
+
+  (wire (pts (xy 274.32 91.44) (xy 269.24 91.44))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS1_TO_GATE))
+
+  (wire (pts (xy 274.32 99.86) (xy 274.32 101.6))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS1_A))
+
+  (wire (pts (xy 274.32 101.6) (xy 279.4 101.6))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS1_TO_SOURCE))
+
+  (wire (pts (xy 279.4 101.6) (xy 279.4 99.06))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS1_SOURCE))
+
+  (wire (pts (xy 274.32 108.42) (xy 274.32 106.68))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS2_K))
+
+  (wire (pts (xy 274.32 106.68) (xy 269.24 106.68))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS2_TO_GATE))
+
+  (wire (pts (xy 274.32 115.1) (xy 274.32 116.84))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS2_A))
+
+  (wire (pts (xy 274.32 116.84) (xy 279.4 116.84))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS2_TO_SOURCE))
+
+  (wire (pts (xy 279.4 116.84) (xy 279.4 114.3))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS2_SOURCE))
+
+  (wire (pts (xy 274.32 123.66) (xy 274.32 121.92))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS3_K))
+
+  (wire (pts (xy 274.32 121.92) (xy 269.24 121.92))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS3_TO_GATE))
+
+  (wire (pts (xy 274.32 130.34) (xy 274.32 132.08))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS3_A))
+
+  (wire (pts (xy 274.32 132.08) (xy 279.4 132.08))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS3_TO_SOURCE))
+
+  (wire (pts (xy 279.4 132.08) (xy 279.4 129.54))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS3_SOURCE))
+
+  (wire (pts (xy 274.32 138.9) (xy 274.32 137.16))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS4_K))
+
+  (wire (pts (xy 274.32 137.16) (xy 269.24 137.16))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS4_TO_GATE))
+
+  (wire (pts (xy 274.32 145.58) (xy 274.32 147.32))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS4_A))
+
+  (wire (pts (xy 274.32 147.32) (xy 279.4 147.32))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS4_TO_SOURCE))
+
+  (wire (pts (xy 279.4 147.32) (xy 279.4 144.78))
+    (stroke (width 0) (type default))
+    (uuid W_D_GS4_SOURCE))
+
+  (symbol (lib_id "Device:R") (at 292.1 91.44 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid R_SNUB1)
+    (property "Reference" "R18" (at 294.64 91.44 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "100R" (at 292.1 91.44 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (at 290.322 91.44 90)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid R_SNUB1-1))
+    (pin "2" (uuid R_SNUB1-2))
+  )
+
+  (symbol (lib_id "Device:C") (at 292.1 95.25 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid C_SNUB1)
+    (property "Reference" "C14" (at 294.64 95.25 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "10nF" (at 294.64 97.79 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric" (at 293.0652 99.06 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Voltage" "100V" (at 294.64 100.33 0)
+      (effects (font (size 1.27 1.27))))
+    (pin "1" (uuid C_SNUB1-1))
+    (pin "2" (uuid C_SNUB1-2))
+  )
+
+  (wire (pts (xy 292.1 88.9) (xy 287.02 88.9))
+    (stroke (width 0) (type default))
+    (uuid W_SNUB1_TOP))
+
+  (wire (pts (xy 292.1 93.98) (xy 292.1 92.71))
+    (stroke (width 0) (type default))
+    (uuid W_SNUB1_RC))
+
+  (wire (pts (xy 292.1 98.79) (xy 292.1 101.6))
+    (stroke (width 0) (type default))
+    (uuid W_SNUB1_BOT))
+
+  (wire (pts (xy 292.1 101.6) (xy 279.4 101.6))
+    (stroke (width 0) (type default))
+    (uuid W_SNUB1_TO_SOURCE))
+
+  (symbol (lib_id "Device:CP") (at 317.5 86.36 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid C_12V_BULK)
+    (property "Reference" "C18" (at 320.04 85.09 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "470uF/25V" (at 322.58 87.63 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" (at 318.4652 90.17 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid C_12V_BULK-1))
+    (pin "2" (uuid C_12V_BULK-2))
+  )
+
+  (wire (pts (xy 317.5 82.55) (xy 317.5 81.28))
+    (stroke (width 0) (type default))
+    (uuid W_C12V_BULK_POS))
+
+  (wire (pts (xy 317.5 81.28) (xy 312.42 81.28))
+    (stroke (width 0) (type default))
+    (uuid W_C12V_BULK_12V))
+
+  (wire (pts (xy 317.5 90.17) (xy 317.5 147.32))
+    (stroke (width 0) (type default))
+    (uuid W_C12V_BULK_GND))
+
+  (wire (pts (xy 317.5 147.32) (xy 320.04 147.32))
+    (stroke (width 0) (type default))
+    (uuid W_C12V_BULK_GND2))
   (symbol (lib_id "Connector:Conn_01x02_Pin") (at 33.02 50.8 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9a0b1c2d-3e4f-5a6b-7c8d-9e0f1a2b3c4d)
