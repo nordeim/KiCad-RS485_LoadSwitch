@@ -1090,7 +1090,6 @@
       )
     )
   )
-)
 
   (junction (at 50.8 50.8) (diameter 0) (color 0 0 0 0)
     (uuid 00000001)
