@@ -1,3 +1,131 @@
+Aha! I see the problem now. Looking at your script output carefully:
+
+```
+Line 1093: indent=1, content=''
+```
+
+**Line 1093 still has `indent=1`** which means there's still a space character there! The line isn't truly empty.
+
+But more importantly, the `find_extra_paren.py` output tells us the real issue:
+
+```
+⚠ Junction found at line 1094, balance=1
+  Still 1 levels deep - lib_symbols NOT closed!
+```
+
+## The Real Problem
+
+We need **ONE MORE closing parenthesis** to properly close `lib_symbols`. The balance=1 means we're still inside lib_symbols when we hit the junction.
+
+## The Solution
+
+We need to **ADD** another closing parenthesis after line 1092, not just clean up line 1093:
+
+```scheme
+1091     )    # closes power:GND symbol
+1092   )      # we thought this closes lib_symbols, but it doesn't!
+1093 )        # ADD THIS LINE - this will actually close lib_symbols
+1094
+1095   (junction (at 50.8 50.8) (diameter 0) (color 0 0 0 0)
+```
+
+Here's a script to apply this fix:
+
+```python
+#!/usr/bin/env python3
+"""
+add_missing_close.py - Add the missing closing parenthesis for lib_symbols
+"""
+
+import sys
+
+def fix_lib_symbols_closure(filepath):
+    with open(filepath, 'r') as f:
+        lines = f.readlines()
+    
+    print("Analyzing the structure...")
+    
+    # Show current state
+    print("\nCurrent lines 1091-1095:")
+    for i in range(1090, 1095):
+        if i < len(lines):
+            print(f"  Line {i+1}: {repr(lines[i].rstrip())}")
+    
+    # Insert a closing parenthesis at line 1093
+    print("\nInserting closing parenthesis at line 1093...")
+    
+    # Make sure line 1093 is a single closing paren with no indent
+    lines[1092] = ')\n'  # This becomes the new line 1093
+    lines.insert(1092, '  )\n')  # Keep the original line 1092
+    
+    print("\nFixed lines 1091-1096:")
+    for i in range(1090, 1096):
+        if i < len(lines):
+            print(f"  Line {i+1}: {repr(lines[i].rstrip())}")
+    
+    # Write the fixed file
+    output_file = filepath + '.fixed2'
+    with open(output_file, 'w') as f:
+        f.writelines(lines)
+    
+    print(f"\nFixed file saved as: {output_file}")
+    
+    # Verify parenthesis balance
+    print("\nVerifying parenthesis balance in lib_symbols section...")
+    balance = 0
+    lib_symbols_found = False
+    
+    for i, line in enumerate(lines[:1100], 1):
+        if '(lib_symbols' in line:
+            lib_symbols_found = True
+            print(f"  lib_symbols starts at line {i}")
+        
+        if lib_symbols_found:
+            opens = line.count('(')
+            closes = line.count(')')
+            balance += opens - closes
+            
+            if i in [1091, 1092, 1093, 1094, 1095]:
+                print(f"  Line {i}: opens={opens}, closes={closes}, balance={balance}")
+            
+            if '(junction' in line:
+                if balance == 0:
+                    print(f"  ✓ Junction found at line {i} with balance=0 (lib_symbols properly closed)")
+                else:
+                    print(f"  ✗ Junction found at line {i} with balance={balance} (lib_symbols NOT closed)")
+                break
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python3 add_missing_close.py <file>")
+        sys.exit(1)
+    
+    fix_lib_symbols_closure(sys.argv[1])
+```
+
+## Why This Is Happening
+
+The four power symbols each have a net imbalance of +1 (6 opens, 5 closes):
+- power:+12V at line 959
+- power:+5V at line 993  
+- power:+3V3 at line 1027
+- power:GND at line 1061
+
+This means after all four symbols, we're 4 levels too deep. But looking at the structure, it seems like each symbol IS properly closed. The issue is that `lib_symbols` itself needs its own closing parenthesis.
+
+The structure should be:
+```scheme
+(lib_symbols      # opens lib_symbols
+  (symbol ...)    # symbol definition
+  (symbol ...)    # symbol definition
+  (symbol ...)    # symbol definition
+  (symbol ...)    # symbol definition
+)                 # closes lib_symbols <- THIS IS MISSING!
+```
+
+Run the `add_missing_close.py` script to add the missing closing parenthesis, and KiCad should finally load the file! 🎯
+
+---
 Excellent! Now we have **crystal clear** evidence of the problem:
 
 ## The Smoking Gun 🔫
