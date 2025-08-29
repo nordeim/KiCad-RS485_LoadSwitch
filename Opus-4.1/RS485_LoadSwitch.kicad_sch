@@ -1634,20 +1634,6 @@
     (pin "2" (uuid R_BOOT0-2))
   )
 
-  (symbol (lib_id "Amplifier_Current:INA181") (at 238.76 96.52 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid INA1)
-    (property "Reference" "U5" (at 243.84 91.44 0))
-    (property "Value" "INA181A3" (at 243.84 101.6 0))
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 238.76 96.52 0)
-      (effects (font (size 1.27 1.27)) hide))
-    (pin "1" (uuid INA1-1))
-    (pin "2" (uuid INA1-2))
-    (pin "3" (uuid INA1-3))
-    (pin "4" (uuid INA1-4))
-    (pin "5" (uuid INA1-5))
-  )
-
   (symbol (lib_id "Device:R") (at 91.44 182.88 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid R_TERM)
@@ -2621,6 +2607,471 @@ size 2.54 2.54) (thickness 0.254) bold) (justify left bottom))
     )
   )
 
+  (symbol (lib_id "Amplifier_Current:INA181") (at 238.76 91.44 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid INA1)
+    (property "Reference" "U5" (at 243.84 88.9 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "INA181A3" (at 243.84 93.98 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 238.76 91.44 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina181.pdf" (at 238.76 91.44 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid INA1-1))
+    (pin "2" (uuid INA1-2))
+    (pin "3" (uuid INA1-3))
+    (pin "4" (uuid INA1-4))
+    (pin "5" (uuid INA1-5))
+  )
+
+  (symbol (lib_id "Amplifier_Current:INA181") (at 238.76 106.68 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid INA2)
+    (property "Reference" "U6" (at 243.84 104.14 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "INA181A3" (at 243.84 109.22 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 238.76 106.68 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina181.pdf" (at 238.76 106.68 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid INA2-1))
+    (pin "2" (uuid INA2-2))
+    (pin "3" (uuid INA2-3))
+    (pin "4" (uuid INA2-4))
+    (pin "5" (uuid INA2-5))
+  )
+
+  (symbol (lib_id "Amplifier_Current:INA181") (at 238.76 121.92 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid INA3)
+    (property "Reference" "U7" (at 243.84 119.38 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "INA181A3" (at 243.84 124.46 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 238.76 121.92 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina181.pdf" (at 238.76 121.92 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid INA3-1))
+    (pin "2" (uuid INA3-2))
+    (pin "3" (uuid INA3-3))
+    (pin "4" (uuid INA3-4))
+    (pin "5" (uuid INA3-5))
+  )
+
+  (symbol (lib_id "Amplifier_Current:INA181") (at 238.76 137.16 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid INA4)
+    (property "Reference" "U8" (at 243.84 134.62 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "INA181A3" (at 243.84 139.7 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 238.76 137.16 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina181.pdf" (at 238.76 137.16 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid INA4-1))
+    (pin "2" (uuid INA4-2))
+    (pin "3" (uuid INA4-3))
+    (pin "4" (uuid INA4-4))
+    (pin "5" (uuid INA4-5))
+  )
+
+
+  (junction (at 264.16 93.98) (diameter 0) (color 0 0 0 0)
+    (uuid J_SENSE1_HI))
+  
+  (junction (at 264.16 96.52) (diameter 0) (color 0 0 0 0)
+    (uuid J_SENSE1_LO))
+
+  (junction (at 264.16 109.22) (diameter 0) (color 0 0 0 0)
+    (uuid J_SENSE2_HI))
+  
+  (junction (at 264.16 111.76) (diameter 0) (color 0 0 0 0)
+    (uuid J_SENSE2_LO))
+
+  (junction (at 264.16 124.46) (diameter 0) (color 0 0 0 0)
+    (uuid J_SENSE3_HI))
+  
+  (junction (at 264.16 127.0) (diameter 0) (color 0 0 0 0)
+    (uuid J_SENSE3_LO))
+
+  (junction (at 264.16 139.7) (diameter 0) (color 0 0 0 0)
+    (uuid J_SENSE4_HI))
+  
+  (junction (at 264.16 142.24) (diameter 0) (color 0 0 0 0)
+    (uuid J_SENSE4_LO))
+
+
+  (wire (pts (xy 259.08 93.98) (xy 264.16 93.98))
+    (stroke (width 0) (type default))
+    (uuid W_R5_HI))
+  
+  (wire (pts (xy 264.16 93.98) (xy 279.4 93.98))
+    (stroke (width 0) (type default))
+    (uuid W_R5_TO_Q1))
+  
+  (wire (pts (xy 264.16 93.98) (xy 228.6 93.98))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE1_TO_INA1_P))
+  
+  (wire (pts (xy 228.6 93.98) (xy 228.6 88.9))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE1_P_ROUTE))
+  
+  (wire (pts (xy 228.6 88.9) (xy 231.14 88.9))
+    (stroke (width 0) (type default))
+    (uuid W_INA1_INP))
+
+  (wire (pts (xy 259.08 96.52) (xy 264.16 96.52))
+    (stroke (width 0) (type default))
+    (uuid W_R5_LO))
+  
+  (wire (pts (xy 264.16 96.52) (xy 226.06 96.52))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE1_TO_INA1_N))
+  
+  (wire (pts (xy 226.06 96.52) (xy 226.06 93.98))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE1_N_ROUTE))
+  
+  (wire (pts (xy 226.06 93.98) (xy 231.14 93.98))
+    (stroke (width 0) (type default))
+    (uuid W_INA1_INN))
+
+  (wire (pts (xy 259.08 109.22) (xy 264.16 109.22))
+    (stroke (width 0) (type default))
+    (uuid W_R6_HI))
+  
+  (wire (pts (xy 264.16 109.22) (xy 279.4 109.22))
+    (stroke (width 0) (type default))
+    (uuid W_R6_TO_Q2))
+  
+  (wire (pts (xy 264.16 109.22) (xy 228.6 109.22))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE2_TO_INA2_P))
+  
+  (wire (pts (xy 228.6 109.22) (xy 228.6 104.14))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE2_P_ROUTE))
+  
+  (wire (pts (xy 228.6 104.14) (xy 231.14 104.14))
+    (stroke (width 0) (type default))
+    (uuid W_INA2_INP))
+
+  (wire (pts (xy 259.08 111.76) (xy 264.16 111.76))
+    (stroke (width 0) (type default))
+    (uuid W_R6_LO))
+  
+  (wire (pts (xy 264.16 111.76) (xy 226.06 111.76))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE2_TO_INA2_N))
+  
+  (wire (pts (xy 226.06 111.76) (xy 226.06 109.22))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE2_N_ROUTE))
+  
+  (wire (pts (xy 226.06 109.22) (xy 231.14 109.22))
+    (stroke (width 0) (type default))
+    (uuid W_INA2_INN))
+
+  (wire (pts (xy 259.08 124.46) (xy 264.16 124.46))
+    (stroke (width 0) (type default))
+    (uuid W_R7_HI))
+  
+  (wire (pts (xy 264.16 124.46) (xy 279.4 124.46))
+    (stroke (width 0) (type default))
+    (uuid W_R7_TO_Q3))
+  
+  (wire (pts (xy 264.16 124.46) (xy 228.6 124.46))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE3_TO_INA3_P))
+  
+  (wire (pts (xy 228.6 124.46) (xy 228.6 119.38))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE3_P_ROUTE))
+  
+  (wire (pts (xy 228.6 119.38) (xy 231.14 119.38))
+    (stroke (width 0) (type default))
+    (uuid W_INA3_INP))
+
+  (wire (pts (xy 259.08 127.0) (xy 264.16 127.0))
+    (stroke (width 0) (type default))
+    (uuid W_R7_LO))
+  
+  (wire (pts (xy 264.16 127.0) (xy 226.06 127.0))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE3_TO_INA3_N))
+  
+  (wire (pts (xy 226.06 127.0) (xy 226.06 124.46))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE3_N_ROUTE))
+  
+  (wire (pts (xy 226.06 124.46) (xy 231.14 124.46))
+    (stroke (width 0) (type default))
+    (uuid W_INA3_INN))
+
+  (wire (pts (xy 259.08 139.7) (xy 264.16 139.7))
+    (stroke (width 0) (type default))
+    (uuid W_R8_HI))
+  
+  (wire (pts (xy 264.16 139.7) (xy 279.4 139.7))
+    (stroke (width 0) (type default))
+    (uuid W_R8_TO_Q4))
+  
+  (wire (pts (xy 264.16 139.7) (xy 228.6 139.7))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE4_TO_INA4_P))
+  
+  (wire (pts (xy 228.6 139.7) (xy 228.6 134.62))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE4_P_ROUTE))
+  
+  (wire (pts (xy 228.6 134.62) (xy 231.14 134.62))
+    (stroke (width 0) (type default))
+    (uuid W_INA4_INP))
+
+  (wire (pts (xy 259.08 142.24) (xy 264.16 142.24))
+    (stroke (width 0) (type default))
+    (uuid W_R8_LO))
+  
+  (wire (pts (xy 264.16 142.24) (xy 226.06 142.24))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE4_TO_INA4_N))
+  
+  (wire (pts (xy 226.06 142.24) (xy 226.06 139.7))
+    (stroke (width 0) (type default))
+    (uuid W_SENSE4_N_ROUTE))
+  
+  (wire (pts (xy 226.06 139.7) (xy 231.14 139.7))
+    (stroke (width 0) (type default))
+    (uuid W_INA4_INN))
+
+
+  (wire (pts (xy 236.22 83.82) (xy 236.22 81.28))
+    (stroke (width 0) (type default))
+    (uuid W_INA1_VCC))
+  
+  (wire (pts (xy 236.22 99.06) (xy 236.22 101.6))
+    (stroke (width 0) (type default))
+    (uuid W_INA1_GND))
+
+  (wire (pts (xy 236.22 99.06) (xy 236.22 96.52))
+    (stroke (width 0) (type default))
+    (uuid W_INA2_VCC))
+  
+  (wire (pts (xy 236.22 114.3) (xy 236.22 116.84))
+    (stroke (width 0) (type default))
+    (uuid W_INA2_GND))
+
+  (wire (pts (xy 236.22 114.3) (xy 236.22 111.76))
+    (stroke (width 0) (type default))
+    (uuid W_INA3_VCC))
+  
+  (wire (pts (xy 236.22 129.54) (xy 236.22 132.08))
+    (stroke (width 0) (type default))
+    (uuid W_INA3_GND))
+
+  (wire (pts (xy 236.22 129.54) (xy 236.22 127.0))
+    (stroke (width 0) (type default))
+    (uuid W_INA4_VCC))
+  
+  (wire (pts (xy 236.22 144.78) (xy 236.22 147.32))
+    (stroke (width 0) (type default))
+    (uuid W_INA4_GND))
+
+  (wire (pts (xy 236.22 81.28) (xy 233.68 81.28))
+    (stroke (width 0) (type default))
+    (uuid W_INA_VCC_RAIL))
+  
+  (wire (pts (xy 236.22 96.52) (xy 233.68 96.52))
+    (stroke (width 0) (type default))
+    (uuid W_INA_VCC_RAIL2))
+  
+  (wire (pts (xy 233.68 81.28) (xy 233.68 96.52))
+    (stroke (width 0) (type default))
+    (uuid W_INA_VCC_CONNECT))
+  
+  (wire (pts (xy 233.68 96.52) (xy 233.68 111.76))
+    (stroke (width 0) (type default))
+    (uuid W_INA_VCC_CONNECT2))
+  
+  (wire (pts (xy 233.68 111.76) (xy 236.22 111.76))
+    (stroke (width 0) (type default))
+    (uuid W_INA_VCC_CONNECT3))
+  
+  (wire (pts (xy 233.68 111.76) (xy 233.68 127.0))
+    (stroke (width 0) (type default))
+    (uuid W_INA_VCC_CONNECT4))
+  
+  (wire (pts (xy 233.68 127.0) (xy 236.22 127.0))
+    (stroke (width 0) (type default))
+    (uuid W_INA_VCC_CONNECT5))
+
+
+  (wire (pts (xy 246.38 91.44) (xy 248.92 91.44))
+    (stroke (width 0) (type default))
+    (uuid W_INA1_OUT))
+  
+  (wire (pts (xy 248.92 91.44) (xy 248.92 73.66))
+    (stroke (width 0) (type default))
+    (uuid W_INA1_OUT_ROUTE1))
+  
+  (wire (pts (xy 248.92 73.66) (xy 210.82 73.66))
+    (stroke (width 0) (type default))
+    (uuid W_INA1_OUT_ROUTE2))
+  
+  (wire (pts (xy 210.82 73.66) (xy 210.82 78.74))
+    (stroke (width 0) (type default))
+    (uuid W_INA1_OUT_ROUTE3))
+  
+  (wire (pts (xy 210.82 78.74) (xy 195.58 78.74))
+    (stroke (width 0) (type default))
+    (uuid W_INA1_TO_PA4))
+
+  (wire (pts (xy 246.38 106.68) (xy 251.46 106.68))
+    (stroke (width 0) (type default))
+    (uuid W_INA2_OUT))
+  
+  (wire (pts (xy 251.46 106.68) (xy 251.46 71.12))
+    (stroke (width 0) (type default))
+    (uuid W_INA2_OUT_ROUTE1))
+  
+  (wire (pts (xy 251.46 71.12) (xy 213.36 71.12))
+    (stroke (width 0) (type default))
+    (uuid W_INA2_OUT_ROUTE2))
+  
+  (wire (pts (xy 213.36 71.12) (xy 213.36 81.28))
+    (stroke (width 0) (type default))
+    (uuid W_INA2_OUT_ROUTE3))
+  
+  (wire (pts (xy 213.36 81.28) (xy 195.58 81.28))
+    (stroke (width 0) (type default))
+    (uuid W_INA2_TO_PA5))
+
+  (wire (pts (xy 246.38 121.92) (xy 254.0 121.92))
+    (stroke (width 0) (type default))
+    (uuid W_INA3_OUT))
+  
+  (wire (pts (xy 254.0 121.92) (xy 254.0 68.58))
+    (stroke (width 0) (type default))
+    (uuid W_INA3_OUT_ROUTE1))
+  
+  (wire (pts (xy 254.0 68.58) (xy 215.9 68.58))
+    (stroke (width 0) (type default))
+    (uuid W_INA3_OUT_ROUTE2))
+  
+  (wire (pts (xy 215.9 68.58) (xy 215.9 83.82))
+    (stroke (width 0) (type default))
+    (uuid W_INA3_OUT_ROUTE3))
+  
+  (wire (pts (xy 215.9 83.82) (xy 195.58 83.82))
+    (stroke (width 0) (type default))
+    (uuid W_INA3_TO_PA6))
+
+  (wire (pts (xy 246.38 137.16) (xy 256.54 137.16))
+    (stroke (width 0) (type default))
+    (uuid W_INA4_OUT))
+  
+  (wire (pts (xy 256.54 137.16) (xy 256.54 66.04))
+    (stroke (width 0) (type default))
+    (uuid W_INA4_OUT_ROUTE1))
+  
+  (wire (pts (xy 256.54 66.04) (xy 218.44 66.04))
+    (stroke (width 0) (type default))
+    (uuid W_INA4_OUT_ROUTE2))
+  
+  (wire (pts (xy 218.44 66.04) (xy 218.44 86.36))
+    (stroke (width 0) (type default))
+    (uuid W_INA4_OUT_ROUTE3))
+  
+  (wire (pts (xy 218.44 86.36) (xy 195.58 86.36))
+    (stroke (width 0) (type default))
+    (uuid W_INA4_TO_PA7))
+
+  (symbol (lib_id "power:+3V3") (at 233.68 81.28 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid PWR_3V3_INA)
+    (property "Reference" "#PWR09" (at 233.68 85.09 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 233.68 77.47 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 233.68 81.28 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid PWR_3V3_INA-1))
+  )
+
+  (symbol (lib_id "power:GND") (at 236.22 147.32 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid PWR_GND_INA)
+    (property "Reference" "#PWR10" (at 236.22 153.67 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 236.22 151.13 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 236.22 147.32 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid PWR_GND_INA-1))
+  )
+
+  (wire (pts (xy 236.22 101.6) (xy 238.76 101.6))
+    (stroke (width 0) (type default))
+    (uuid W_INA_GND1))
+  
+  (wire (pts (xy 238.76 101.6) (xy 238.76 116.84))
+    (stroke (width 0) (type default))
+    (uuid W_INA_GND2))
+  
+  (wire (pts (xy 236.22 116.84) (xy 238.76 116.84))
+    (stroke (width 0) (type default))
+    (uuid W_INA_GND3))
+  
+  (wire (pts (xy 238.76 116.84) (xy 238.76 132.08))
+    (stroke (width 0) (type default))
+    (uuid W_INA_GND4))
+  
+  (wire (pts (xy 236.22 132.08) (xy 238.76 132.08))
+    (stroke (width 0) (type default))
+    (uuid W_INA_GND5))
+  
+  (wire (pts (xy 238.76 132.08) (xy 238.76 147.32))
+    (stroke (width 0) (type default))
+    (uuid W_INA_GND6))
+  
+  (wire (pts (xy 236.22 147.32) (xy 238.76 147.32))
+    (stroke (width 0) (type default))
+    (uuid W_INA_GND7))
+
+
+  (symbol (lib_id "Device:C") (at 241.3 81.28 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid C_INA_BYPASS)
+    (property "Reference" "C13" (at 241.3 78.74 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF" (at 241.3 83.82 90)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 245.11 80.3148 0)
+      (effects (font (size 1.27 1.27)) hide))
+    (pin "1" (uuid C_INA_BYPASS-1))
+    (pin "2" (uuid C_INA_BYPASS-2))
+  )
+
+  (wire (pts (xy 237.49 81.28) (xy 233.68 81.28))
+    (stroke (width 0) (type default))
+    (uuid W_C_INA_VCC))
+  
+  (wire (pts (xy 245.11 81.28) (xy 248.92 81.28))
+    (stroke (width 0) (type default))
+    (uuid W_C_INA_GND))
+  
+  (wire (pts (xy 248.92 81.28) (xy 248.92 101.6))
+    (stroke (width 0) (type default))
+    (uuid W_C_INA_GND2))
+  
+  (wire (pts (xy 248.92 101.6) (xy 238.76 101.6))
+    (stroke (width 0) (type default))
+    (uuid W_C_INA_GND3))
   (symbol (lib_id "Device:C") (at 50.8 57.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9a0b1c2d-3e4f-5a6b-7c8d-9e0f1a2b3c4d)
